@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="vh-100">
+  <div class="d-flex position-relative w-100 " style="transition: all 0.4s ease;" id="profileBlur">
+    <aside id="sidebar">
+      <!-- Logo section start -->
+      <div class="d-flex">
+        <button id="toggle-btn" type="button">
+          <i class="fa-solid fa-grip-lines"></i>
+        </button>
+        <div class="sidebar-logo">
+          <a href="#">
+            <img src="./assets/logo.png" alt="">
+          </a>
+        </div>
+      </div>
+      <hr />
+      <!-- Logo section end -->
+
+      <!-- Links section start -->
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="fa-solid fa-gauge"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#admin"
+            aria-expanded="false" aria-controls="admin">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Administration</span>
+          </a>
+          <ul id="admin" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-code-branch"></i>
+                Branches
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./users.html" class="sidebar-link">
+                <i class="fa-solid fa-user"></i>
+                User
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-book"></i>
+                Roles
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./data-table.html" class="sidebar-link">
+                <i class="fa-solid fa-table"></i>
+                User Table
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#reports"
+            aria-expanded="false" aria-controls="reports">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>G.L</span>
+          </a>
+          <ul id="reports" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-code-branch"></i>
+                Fiscal Years
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-list"></i>
+                Account List
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-ticket"></i>
+                Voucher Numbers
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-ticket-simple"></i>
+                Voucher
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-book-open-reader"></i>
+                Account Ledger
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                Trial Balance
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#settings"
+            aria-expanded="false" aria-controls="settings">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Inventory</span>
+          </a>
+          <ul id="settings" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-warehouse"></i>
+                Warehouses
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-layer-group"></i>
+                Product Categories
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-ruler-vertical"></i>
+                UOM
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-box-open"></i>
+                Product UOM
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-box-archive"></i>
+                Products
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-money-bill-trend-up"></i>
+                Stock Activity
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                Product Ledger
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Add Ons</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./purchases.html" class="sidebar-link">
+            <i class="fa-solid fa-wallet"></i>
+            <span>Purchases</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#sales"
+            aria-expanded="false" aria-controls="sales">
+            <i class="fa-solid fa-gear"></i>
+            <span>Sales</span>
+          </a>
+          <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-shopping-cart"></i>
+                Sales Orders
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                Good Deliver
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./invoices.html" class="sidebar-link">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Sales Invoice
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-tags"></i>
+                Sales Register
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">
+                <i class="fa-solid fa-chart-pie"></i>
+                Sales Aging Reports
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Links section end -->
+
+      <!-- LogOut section start -->
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Log Out</span>
+        </a>
+      </div>
+      <!-- LogOut section end -->
+    </aside>
+
+
+    <div class="p-2 w-100 overflow-y-auto custom-scrollbar"
+    style="background-color: #E8ECEC; transition: all 0.35s ease-in-out; height: calc(100vh - [header-height]px);">
+
+      <div class="header-container">
+        <div class="header-content">
+          <div>
+            <p class="responsive-heading" style="color: #11047A; font-size: 1.2rem; font-weight: 500;">Hi Shoaib,</p>
+            <h1 class="fw-semibold responsive-heading" style="color: #11047A;">Welcome to Hisaab Keeper!</h1>
+          </div>
+          <div class="action-buttons">
+            <a href="#Chat/Feedback" class="icon-button"><i class="fa-solid fa-comment"></i></a>
+            <a href="#Notification" class="icon-button"><i class="fa-solid fa-bell"></i></a>
+            <div class="dropdown">
+              <div class="user-profile" onclick="toggleDropdown()">
+                <img src="./assets/mini profile.png" alt="John Doe" class="profile-image">
+                <span class="username">John Doe</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="dropdown-menu shadow border-0 rounded-3" id="profileDropdown">
+                <a href="#" class="dropdown-item" onclick="showProfileDialog(); return false;">
+                  <i class="fa-solid fa-user"></i> Profile
+                </a>
+                <a href="#LockScreen" class="dropdown-item">
+                  <i class="fa-solid fa-lock"></i> Lock Screen
+                </a>
+                <a href="#LogOut" class="dropdown-item">
+                  <i class="fa-solid fa-right-from-bracket"></i> Log Out
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <div class="box">
+              <div class="miniCardIcon"><i class="fa-solid fa-basket-shopping"></i></div>
+              <div class="mniCardTxt">
+                <span class="upperTxt">Open Purchase Order</span>
+                <div class="d-flex justify-content-between">
+                  <span class="spanTxt">3 <i class="fa-solid fa-arrow-down redArrow"></i></span>
+                  <span class="spanTxt">3 <i class="fa-solid fa-arrow-up greenArrow"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="box">
+              <div class="mniCardTxt">
+                <span class="upperTxt">Open Purchase Invoice</span>
+                <div class="d-flex justify-content-between">
+                  <span class="spanTxt">5 <i class="fa-solid fa-xmark redArrow"></i></span>
+                  <span class="spanTxt">5 <i class="fa-solid fa-arrow-up redArrow"></i></span>
+                </div>
+              </div>
+              <div class="miniCardIcon"><i class="fa-solid fa-chart-simple"></i></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="box">
+              <div class="miniCardIcon"><i class="fa-solid fa-money-bill"></i></div>
+              <div class="mniCardTxt">
+                <span class="upperTxt">Open Sales Order</span>
+                <div class="d-flex justify-content-between">
+                  <span class="spanTxt">3 <i class="fa-solid fa-arrow-down redArrow"></i></span>
+                  <span class="spanTxt">3 <i class="fa-solid fa-arrow-up greenArrow"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="box">
+              <div class="mniCardTxt">
+                <span class="upperTxt">Open Sales Invoice</span>
+                <div class="d-flex justify-content-between">
+                  <span class="spanTxt">3 <i class="fa-regular fa-credit-card redArrow"></i></span>
+                  <span class="spanTxt">3 <i class="fa-solid fa-cart-shopping redArrow"></i></span>
+                </div>
+              </div>
+              <div class="miniCardIcon"><i class="fa-solid fa-receipt"></i></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="anotherBox">
+              <div class="profileImg">
+                <img src="./assets/profile.png">
+              </div>
+              <div class="nameAndLocation">
+                <span class="userName">Shoaib</span>
+                <span><i class="fa-solid fa-location-dot"></i> New York, USA</span>
+              </div>
+              <div class="row">
+                <div class="col-4 d-flex flex-column align-items-center"><span class="lightTxt">Projects</span><span
+                    class="boldTxt">28</span></div>
+                <div class="col-4 d-flex flex-column align-items-center"><span class="lightTxt">Followers</span><span
+                    class="boldTxt">643</span></div>
+                <div class="col-4 d-flex flex-column align-items-center"><span class="lightTxt">Following</span><span
+                    class="boldTxt">76</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="anotherBox">
+              <div class="greenBox">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="txtWhite">Credit Balance</span>
+                  <span><i class="txtWhite fa-solid fa-ellipsis"></i></span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="amount">$25,215</span>
+                  <span class="txtWhite"><i class="txtWhite fa-solid fa-arrow-trend-up"></i></span>
+                </div>
+              </div>
+              <span class="lightTxt mb-4">Recent</span>
+              <div class="row">
+                <div class="col-2 d-flex justify-content-center align-items-center"><i
+                    class="anotherIcon-1 fa fa-building-circle-check"></i></div>
+                <div class="col-6 d-flex flex-column"><span class="bilLs">Bill & Taxes</span><span class="tiMe">Today,
+                    16:36</span></div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                  <p class="priCe">-$154.50</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 d-flex justify-content-center align-items-center"><i
+                    class="anotherIcon-2 fa-solid fa-car"></i></div>
+                <div class="col-6 d-flex flex-column"><span class="bilLs">Car Energy</span><span class="tiMe">23Jun,
+                    19:04</span></div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                  <p class="priCe">-$40.40</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2 d-flex justify-content-center align-items-center"><i
+                    class="anotherIcon-3 fa-solid fa-graduation-cap"></i></div>
+                <div class="col-6 d-flex flex-column"><span class="bilLs">Design course</span><span class="tiMe">21Jun,
+                    19:04</span></div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                  <p class="priCe">-$70.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="anotherBox">
+              <div class="">
+                <div class="d-flex justify-content-between align-items-center mb-1"><span class="lightTxt">Spent this
+                    month</span><span class="grEEn"><i class="fa-solid fa-caret-up"></i> +2.45%</span></div>
+                <div class="d-flex flex-column mb-3"><span class="anotherAmount">$682.5</span><span class="grEEn"><i
+                      class="fa-solid fa-circle-check"></i> On track</span></div>
+                <div class="expensesChart"><svg width="290" height="146" viewBox="0 0 290 146" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="273.545" y="145.578" width="145.578" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 273.545 145.578)" fill="#E9EDF7" />
+                    <rect x="273.545" y="145.578" width="34.7148" height="15.9091" rx="7.95456"
+                      transform="rotate(-90 273.545 145.578)" fill="#228B22" />
+                    <rect x="228.091" y="145.578" width="145.578" height="15.909" rx="7.95448"
+                      transform="rotate(-90 228.091 145.578)" fill="#E9EDF7" />
+                    <rect x="228.091" y="145.578" width="132.14" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 228.091 145.578)" fill="#228B22" />
+                    <rect x="182.636" y="145.578" width="145.578" height="15.9091" rx="7.95453"
+                      transform="rotate(-90 182.636 145.578)" fill="#E9EDF7" />
+                    <rect x="182.636" y="145.578" width="100.785" height="15.909" rx="7.95452"
+                      transform="rotate(-90 182.636 145.578)" fill="#228B22" />
+                    <rect x="137.182" y="145.578" width="145.578" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 137.182 145.578)" fill="#E9EDF7" />
+                    <rect x="137.182" y="145.578" width="75.0287" height="15.9091" rx="7.95455"
+                      transform="rotate(-90 137.182 145.578)" fill="#228B22" />
+                    <rect x="91.7273" y="145.578" width="145.578" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 91.7273 145.578)" fill="#E9EDF7" />
+                    <rect x="91.7273" y="145.578" width="119.822" height="15.9091" rx="7.95455"
+                      transform="rotate(-90 91.7273 145.578)" fill="#228B22" />
+                    <rect x="46.2728" y="145.578" width="145.578" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 46.2728 145.578)" fill="#E9EDF7" />
+                    <rect x="46.2728" y="145.578" width="60.4709" height="15.9091" rx="7.95455"
+                      transform="rotate(-90 46.2728 145.578)" fill="#228B22" />
+                    <rect x="0.818237" y="145.578" width="145.578" height="15.9091" rx="7.95454"
+                      transform="rotate(-90 0.818237 145.578)" fill="#E9EDF7" />
+                    <rect x="0.818237" y="145.578" width="86.227" height="15.9091" rx="7.95455"
+                      transform="rotate(-90 0.818237 145.578)" fill="#228B22" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="anotherBox">
+              <div class="row">
+                <div
+                  class="col-lg-6 d-flex flex-column gap-3 align-items-start justify-content-center p-5 learnMoreBtn">
+                  <p class="p_1">Reach financial goals faster</p>
+                  <p class="p_2">Use your venus card around the world with no hidden fees. Hold transfer and spend money
+                  </p>
+                  <button class="">Learn more</button>
+                </div>
+                <div class="col-6 creditCard">
+                  <img src="./assets/cc.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="anotherBox">
+              <div class="">
+                <div class="svgDiv">
+                  <svg viewBox="0 0 69 77" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgDiv">
+                    <path
+                      d="M56.3187 9.94874C56.0153 9.94874 55.712 9.87291 55.4466 9.72124C48.1666 5.96749 41.8724 4.37499 34.327 4.37499C26.8195 4.37499 19.6912 6.15708 13.2074 9.72124C12.2974 10.2142 11.1599 9.87291 10.6291 8.96291C10.1362 8.05291 10.4774 6.87749 11.3874 6.38458C18.4399 2.55499 26.1749 0.583328 34.327 0.583328C42.4032 0.583328 49.4557 2.36541 57.1907 6.34666C58.1387 6.83958 58.4799 7.97708 57.987 8.88708C57.6457 9.56958 57.0012 9.94874 56.3187 9.94874ZM2.05991 29.855C1.68074 29.855 1.30158 29.7412 0.960327 29.5137C0.0882436 28.9071 -0.10134 27.7317 0.505326 26.8596C4.25908 21.5512 9.03658 17.3804 14.7241 14.4608C26.6299 8.31833 41.8724 8.28041 53.8162 14.4229C59.5037 17.3425 64.2812 21.4754 68.0349 26.7458C68.6416 27.58 68.452 28.7933 67.5799 29.4C66.7078 30.0067 65.5324 29.8171 64.9257 28.945C61.5132 24.1675 57.1907 20.4137 52.072 17.7975C41.1899 12.2237 27.2745 12.2237 16.4303 17.8354C11.2737 20.4896 6.95116 24.2812 3.53866 29.0587C3.23533 29.5896 2.66658 29.855 2.05991 29.855ZM25.7578 75.6204C25.2649 75.6204 24.772 75.4308 24.4307 75.0517C21.132 71.7529 19.3499 69.6296 16.8095 65.0417C14.1932 60.3779 12.8282 54.6904 12.8282 48.5858C12.8282 37.3246 22.4591 28.1487 34.2891 28.1487C46.1191 28.1487 55.7499 37.3246 55.7499 48.5858C55.7499 49.6475 54.9157 50.4817 53.8541 50.4817C52.7924 50.4817 51.9582 49.6475 51.9582 48.5858C51.9582 39.41 44.0337 31.9404 34.2891 31.9404C24.5445 31.9404 16.6199 39.41 16.6199 48.5858C16.6199 54.0458 17.8332 59.0887 20.1462 63.1837C22.5728 67.5442 24.2412 69.4021 27.1607 72.3596C27.8812 73.1179 27.8812 74.2933 27.1607 75.0517C26.7437 75.4308 26.2507 75.6204 25.7578 75.6204ZM52.9441 68.6058C48.432 68.6058 44.4507 67.4683 41.1899 65.2312C35.5403 61.4017 32.1657 55.1833 32.1657 48.5858C32.1657 47.5242 32.9999 46.69 34.0616 46.69C35.1232 46.69 35.9574 47.5242 35.9574 48.5858C35.9574 53.9321 38.6874 58.975 43.3132 62.0842C46.0053 63.9042 49.1524 64.7762 52.9441 64.7762C53.8541 64.7762 55.3707 64.6625 56.8874 64.3971C57.9112 64.2075 58.897 64.89 59.0866 65.9517C59.2762 66.9754 58.5937 67.9612 57.532 68.1508C55.3707 68.5679 53.4749 68.6058 52.9441 68.6058ZM45.3228 76.4167C45.1712 76.4167 44.9816 76.3787 44.8299 76.3408C38.8012 74.6725 34.8578 72.4354 30.7249 68.3783C25.4166 63.1079 22.497 56.0933 22.497 48.5858C22.497 42.4433 27.7295 37.4383 34.1753 37.4383C40.6212 37.4383 45.8537 42.4433 45.8537 48.5858C45.8537 52.6429 49.3799 55.9417 53.7403 55.9417C58.1007 55.9417 61.627 52.6429 61.627 48.5858C61.627 34.2912 49.3041 22.6887 34.1374 22.6887C23.3691 22.6887 13.5107 28.6796 9.07449 37.9692C7.59574 41.0404 6.83741 44.6425 6.83741 48.5858C6.83741 51.5433 7.10283 56.2071 9.37783 62.2737C9.75699 63.2596 9.26408 64.3592 8.27824 64.7004C7.29241 65.0796 6.19283 64.5487 5.85158 63.6008C3.99366 58.6337 3.08366 53.7046 3.08366 48.5858C3.08366 44.0358 3.95574 39.9029 5.66199 36.3008C10.7049 25.7221 21.8903 18.8592 34.1374 18.8592C51.3895 18.8592 65.4187 32.1679 65.4187 48.5479C65.4187 54.6904 60.1862 59.6954 53.7403 59.6954C47.2945 59.6954 42.062 54.6904 42.062 48.5479C42.062 44.4908 38.5357 41.1921 34.1753 41.1921C29.8149 41.1921 26.2887 44.4908 26.2887 48.5479C26.2887 55.0317 28.7912 61.0983 33.3791 65.6483C36.9812 69.2125 40.4316 71.1842 45.7778 72.6629C46.8016 72.9283 47.3703 73.99 47.1049 74.9758C46.9153 75.8479 46.1191 76.4167 45.3228 76.4167Z"
+                      fill="#228B22" />
+                  </svg>
+                </div>
+                <div class="lineHieght">
+                  <span class="p_3">Control card security in-app with a tap</span>
+                  <span class="p_4">Discover our card with one tap</span>
+                </div>
+                <div class="learnMoreBtn">
+                  <button>Cards</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Dialogue box start -->
+    <div id="profileDialog" class="profile-dialog-backdrop d-none">
+      <div class="profile-dialog bg-white rounded-3 p-4 shadow-lg text-center">
+        <img src="./assets/mini profile.png" alt="John Doe" class="rounded-circle mb-3"
+          style="width: 100px; height: 100px; object-fit: cover;">
+        <h3 class="mb-4">John Doe</h3>
+        <button onclick="closeProfileDialog()" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+    <!-- Dialogue box end -->
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f929a8100c.js" crossorigin="anonymous"></script>
+<script src="sidebar.js"></script>
+<script src="index.js"></script>
+
+</html>

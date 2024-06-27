@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  /* profile dropdown css start */
+.header-container {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.responsive-heading {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-button {
+  font-size: 1.2rem;
+  color: #11047A;
+  background-color: #e9ecef;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+  background-color: #dee2e6;
+  transform: scale(1.1);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile:hover {
+  background-color: #dee2e6;
+}
+
+.profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  color: #11047A;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 200px;
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  color: #11047A;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f3f5;
+}
+
+.dropdown-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+/* profile dropdown css end */
+
+
+/* dialogue box css start */
+.profile-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.profile-dialog-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-dialog {
+  max-width: 300px;
+  width: 90%;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-dialog-backdrop.show .profile-dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+/* dialogue box css end */
+
+
+  .purchaseBgGreen {
+    background-color: #228B22;
+    padding: 1rem;
+  }
+  .topBtnSpan span{
+    color: #fff;
+    font-size: 1rem;
+  }
+  .topBtnSpan button{
+    border: none;
+    outline: none;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem .845rem;
+    color: #11047A;
+    background: lightgray;
+  }
+  .inputSelect {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0rem;
+    gap: .6rem;
+    background: #fff;
+
+  }
+  .inputSelect .item-1, .item-2, .item-3, .item-4, .item-5{
+    width: 20%;
+    height: 130px;
+  }
+  .inputSelect .item-1{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .inputSelect .item-1 span{
+    font-weight: 600;
+    color: #11047A;
+    font-size: 1rem;
+  }
+  .inputSelect .item-1 select{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+  }
+  .inputSelect .item-1 input{
+    padding: .3rem .5rem;
+    width: 100%;
+    border: 1px solid #eee;
+    outline: none;
+    border-radius: .2rem;
+    border-left: 2px solid #000;
+    font-size: .845rem !important;
+    font-weight: 500 !important;
+  }
+  .inputSelect .item-1 input::placeholder{
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+  }
+  .inputSelect .item-2{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .inputSelect .item-2 span{
+    font-weight: 600;
+    color: #11047A;
+    font-size: 1rem;
+  }
+  .inputSelect .item-2 select{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+  }
+  .inputSelect .item-2 input{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+  }
+  .inputSelect .item-3{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .inputSelect .item-3 span{
+    font-weight: 600;
+    color: #11047A;
+    font-size: 1rem;
+  }
+  .inputSelect .item-3 select{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+    margin-bottom: 6px;
+  }
+  .inputSelect .item-3 .modifInput{
+    padding: .3rem .5rem;
+    width: 100px;
+    border-radius: .2rem;
+    outline: none;
+    border: 1px solid #eee;
+    border-left: 2px solid #000;
+    font-size: .845rem !important;
+    font-weight: 500 !important;
+  }
+  .inputSelect .item-3 .anotherSpan{
+    font-weight: normal !important;
+    color: #11047A;
+    font-size: .845rem !important;
+  }
+
+  .inputSelect .item-4{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .inputSelect .item-4 span{
+    font-weight: 600;
+    color: #11047A;
+    font-size: 1rem;
+  }
+  .inputSelect .item-4 select{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+  }
+  .inputSelect .item-4 input{
+    border: 1px solid #eee;
+    outline: none;
+    padding: .3rem .5rem;
+    width: 100%;
+    border-radius: .2rem;
+    font-size: .845rem;
+    font-weight: 500;
+    color: #11047A;
+    border-left: 2px solid #000;
+  }
+  .inputSelect .item-5{
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .inputSelect .item-5 span{
+    font-weight: 600;
+    color: #11047A;
+    font-size: 1rem;
+  }
+  .inputSelect .item-5 textarea{
+    border: 1px solid #eee;
+    border-radius: .2rem;
+    width: 100%;
+    outline: none;
+    padding: .3rem .5rem;
+    height: 88.5px;
+
+  }
+  .table-responsive{
+    border-top: 3px solid #11047A;
+  }
+  .tableSelect{
+    outline: none !important;
+    padding: .3rem .5rem !important;
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: .2rem !important;
+    font-size: .845rem !important;
+    font-weight: 500 !important;
+    color: #11047A !important;
+    border-left: 2px solid #000 !important;
+  }
+  .tableInput{
+    outline: none !important;
+    border: 1px solid #eee;
+    padding: .3rem .5rem !important;
+    width: 100%;
+    border-radius: .2rem !important;
+    font-size: .845rem !important;
+    font-weight: 500 !important;
+    color: #11047A !important;
+    border-left: 2px solid #000 !important;
+  }
+  .customPadding{
+    padding: 1.2rem .75rem !important;
+  }
+  .customBg{
+    background: lightgray !important;
+  }
+  .customBg button{
+    border: 1px solid #11047A !important;
+    outline: none !important;
+    background: #fff !important;
+    border-radius: .6rem !important;
+    padding: .3rem .5rem !important;
+    font-size: .845rem !important;
+    font-weight: 500 !important;
+    color: #11047A !important;
+  }
+  table, thead th, tbody td{
+    color: #11047A !important;
+  }
+  tfoot td{
+    background-color: #11047A !important;
+    color: #fff !important;
+  }
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 12px;
+    }
+  
+    th,
+    td {
+      padding: 5px;
+    }
+  
+    .focusBtn {
+      padding: .3rem 1rem;
+  
+    }
+  
+    .bgGreen input {
+      padding: .3rem 1rem;
+    }
+  
+    .mainTxtAndIcon div h1 {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  
+    .topIcons a i {
+      font-size: 1rem;
+    }
+  
+    .iconsContainer {
+      width: 50%;
+      justify-content: end;
+      gap: 1rem;
+    }
+  
+    .profileContainer {
+      gap: .2rem;
+    }
+  
+    .profileContainer span {
+      font-size: .75rem !important;
+    }
+  
+    .tableHeader {
+      width: 50%;
+    }
+  
+    .topIcons {
+      gap: .6rem;
+    }
+    .topBtnSpan span{
+        font-size: .845rem;
+      }
+      .topBtnSpan button{
+        font-size: .845rem;
+        padding: .3rem .75rem;
+      }
+    .inputSelect {
+        flex-direction: column !important;
+    
+      }
+    .inputSelect .item-1, .item-2, .item-3, .item-4, .item-5{
+        width: 100%;
+        border-top: 1px solid #eee;
+      }
+      .bioDataContainer{
+        width: 95%;
+        
+      }
+      /* profile dropdown css start */
+
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .responsive-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .user-profile {
+    justify-content: center;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .icon-button, .user-profile {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+
+  .user-profile .fa-chevron-down {
+    display: none;
+  }
+/* profile dropdown css end */
+  }

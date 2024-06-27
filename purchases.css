@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* profile dropdown css start */
+.header-container {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.responsive-heading {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-button {
+  font-size: 1.2rem;
+  color: #11047A;
+  background-color: #e9ecef;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+  background-color: #dee2e6;
+  transform: scale(1.1);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-profile:hover {
+  background-color: #dee2e6;
+}
+
+.profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  color: #11047A;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 200px;
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  color: #11047A;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f3f5;
+}
+
+.dropdown-item i {
+  width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+/* profile dropdown css end */
+
+/* dialogue box css start */
+
+.profile-dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.profile-dialog-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-dialog {
+  max-width: 300px;
+  width: 90%;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile-dialog-backdrop.show .profile-dialog {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* dialogue box css end */
+
+/* Popup CSS End */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  background: #fff;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #11047A;
+}
+
+.OpenTagBtn {
+  border: none;
+  border-radius: .6rem;
+  font-size: .75rem;
+  padding: .2rem .5rem;
+  font-weight: 500;
+  background-color: yellow;
+}
+
+.actionBtn {
+  border: none;
+  border-radius: .6rem;
+  font-size: .75rem;
+  padding: .2rem .5rem;
+  color: #fff;
+  font-weight: 500;
+  background-color: #FF0000;
+}
+
+.tableBottom {
+  border-top: 1px double #909090;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.tableBottom p,
+span {
+  font-size: .75rem;
+}
+
+.prevNextBtn a {
+  text-decoration: none;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .2rem .5rem;
+  background-color: #dad7d7;
+  color: #11047A;
+  cursor: pointer;
+}
+
+.prevNextBtn a:first-child {
+  border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+}
+
+.prevNextBtn a:last-child {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+.prevNextBtn span {
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .2rem .5rem;
+  background-color: #228B22;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .bgGreen input {
+    padding: .3rem 1rem;
+  }
+  .inputSelect {
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .inputSelect input::placeholder {
+    font-size: .75rem !important;
+  }
+  .inputSelect select {
+    font-size: .75rem !important;
+  }
+  /* profile dropdown css end */
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .responsive-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .action-buttons {
+    justify-content: center;
+  }
+  .user-profile {
+    justify-content: center;
+  }
+  .username {
+    display: none;
+  }
+  .icon-button, .user-profile {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+  .user-profile .fa-chevron-down {
+    display: none;
+  }
+/* profile dropdown css end */
+
+.p-3 {
+  padding: 1rem !important;
+}
+h1 {
+  font-size: 1.5rem !important;
+}
+.form-control, .form-select {
+  font-size: 0.875rem !important;
+  padding: 0.375rem 0.75rem !important;
+}
+}
